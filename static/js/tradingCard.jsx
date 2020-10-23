@@ -12,7 +12,7 @@ function TradingCard(props) {
     <div className="card">
       <h2>Name: {props.name}</h2>
       <img src={props.imgUrl} />
-      <h2>Skill: </h2>
+      <h2>Skill: {props.skill}</h2>
     </div>
   );
 }
@@ -48,4 +48,26 @@ ReactDOM.render(
     />
   ),
   document.querySelector('#llambda')
+);
+
+ReactDOM.render(
+  (
+    <TradingCard
+      name="Seedpy"
+      skill="Cookie baking"
+      imgUrl="/static/img/seedpy.jpg"
+    />
+  ),
+  document.querySelector('#seedpy')
+);
+
+ReactDOM.render(
+  (
+    <TradingCard
+      name="Polymorphism"
+      skill="Morphing"
+      imgUrl="/static/img/polymorphism.jpg"
+    />
+  ),
+  document.querySelector('#polymorphism')
 );
